@@ -1,0 +1,170 @@
+<html>                                                  
+<head>
+<title>Sticky Navbar</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    .header{
+        
+        font-size: 2em;
+        background-color: #ddd;
+        padding: 90px;
+        text-align: center;
+    }
+    
+    .navbar{
+        
+        background-color: #111;
+        overflow: hidden;
+    }
+    
+    .navbar a{
+        
+        float: left;
+        font-size: 2em;
+        padding:20px;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .navbar a:hover{
+        
+        color: #111;
+        background-color: #ddd;
+    }
+    
+    .navbar a.active{
+        
+        background-color: green;
+        color: #111;
+    }
+    
+    .content p{
+        
+        padding: 30px;
+    }
+    
+    .sticky{
+        
+        top: 0;
+        position: fixed;
+        width: 100%;
+    }
+    
+    
+    
+    
+    
+    
+</style>
+</head>
+<body>
+    
+    
+    <div class="header">
+       <h2>Scroll Down</h2>
+       <p>Scroll down to see the sticky effect.</p>
+    </div>
+    
+    
+    <div class="navbar" id="myNav">
+    
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#home">Contact</a>
+    </div>
+    
+    
+    
+    <div class="content">
+  <h3>Sticky Navigation Example</h3>
+  <p>The navbar will stick to the top when you reach its scroll position.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</div>
+
+    
+    <script>
+    
+        
+        
+        window.onscroll=function() {myFunction()}
+        
+
+            
+            var navbar=document.getElementById("myNav");
+            
+            var sticky=navbar.offsetTop;
+          
+        
+        function myFunction(){
+            
+            if(window.pageYOffset >= sticky){
+                
+                navbar.classList.add("sticky")
+            }else{
+
+                navbar.classList.remove("sticky")
+                
+            }
+        }
+         
+        
+        
+        
+    
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

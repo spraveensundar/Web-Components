@@ -1,0 +1,283 @@
+<html>                                                  
+<head>
+<title>Sidenav Push</title>
+    
+<meta charset="utf-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    .topNav{
+        
+        width: 0px;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+        z-index:1;
+        overflow-x: hidden;
+        position: fixed;
+        background-color: #111; 
+        padding-top:50px;
+    }
+    
+    .topNav a{
+        
+        font-size: 2em;
+        padding: 30px;
+        color: #888;
+        transition: 0.3s;
+        text-decoration:none;
+        display: block;
+        text-align: left;
+    }
+    
+    .topNav a:hover{
+        
+        color: #fff;
+    }
+    
+    .topNav .close{
+        
+        position: absolute;
+        right: 0;
+        font-size:45px;
+        font-weight: bold;
+        top: 0;
+    }
+    
+
+    .content{
+        
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    .content h2{
+        
+        font-size: 2em;
+    }
+    
+    .content p{
+        
+        padding: 30px;
+    }
+    
+        
+    span{
+        
+        position: absolute;
+        top: 0;;
+        font-size: 2em;
+        font-weight: bold;
+        right: 0;
+        padding: 20px;
+    }
+
+    
+    
+    #main{
+        
+        transition: margin-left .5s;
+    }
+    
+    
+    
+    @media screen and (max-width:600px){
+        
+        .content{
+            
+            margin-top:150px;
+        }
+    }
+    
+    
+    
+</style>
+</head>
+<body>
+    
+    
+    
+    
+    <div id="myNav" class="topNav" >
+    
+        <a class="close" onclick="closetab()">&times;</a>
+        
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#client">Client</a>
+        <a href="#contact">Contact</a>
+    
+    </div>
+    
+    
+    
+    <div id="main" class="content">
+        <h2>Sidenav Push</h2>
+        
+       <p>Click on the element below to open the side navigation menu,
+           and push this content to the right.</p>
+           
+    </div>
+    
+    
+    <span class="open" onclick="opentab()">&#9776;</span>
+    
+    
+ <script>
+    
+ 
+     
+     function opentab(){
+         
+         document.getElementById("myNav").style.width="250px";
+         document.getElementById("main").style.marginLeft="250px";
+     }
+     
+     
+     function closetab(){
+         
+         document.getElementById("myNav").style.width="0px";
+         document.getElementById("main").style.marginLeft="0px";
+     }
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+ </script>   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

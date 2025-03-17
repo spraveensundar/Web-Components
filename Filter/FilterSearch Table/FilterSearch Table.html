@@ -1,0 +1,233 @@
+<html>                                                  
+<head>
+<title>FilterSearch Table</title>
+<meta charset="utf-8">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+
+    *{
+        margin: 10px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    #myinput{
+        
+        width: 100%;
+        padding: 20px;
+        border: 3px solid #ddd;
+        outline: none;
+        border-radius:5px;
+        font-size: 1.5em;
+        background-color:aqua;
+    }
+    
+    #myinput:hover{
+        
+        border: 3px solid #111;
+        background-color: #fff;
+    }
+    
+    table{
+   
+        border-collapse: collapse;
+        border: 1px solid #ddd;
+        font-size: 2em;
+        width: 100%;
+    }
+    
+    th{
+        
+        background-color: #ddd;
+        padding:25px;
+    }
+    
+
+    td{
+        
+        padding: 25px;
+    }
+    
+    tr{
+        border: 1px solid #ddd;
+
+    }
+    
+    tr:hover{
+        
+        background-color: #ddd;
+    }
+    
+    
+    
+   
+    
+</style>
+</head>
+<body>
+
+    
+    
+    <input type="search" id="myinput" onkeyup="myFunction()" placeholder="Search Country">
+    
+    
+    <table id="myTable">
+    
+      
+    <tr class="header">
+    <th style="width:30%">Name</th>
+    <th style="width:20%">Country</th>
+   </tr>
+  
+   <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbkop</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Koniglich Essen</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Italy</td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+    
+    </table>
+    
+  <script>
+  
+     
+      
+  
+      
+            
+      
+      
+function myFunction(){
+          
+          
+          let table,input,filter,tr,td,i,textValue;
+          
+          
+          input=document.getElementById("myinput");
+          
+          filter=input.value.toUpperCase();
+          
+          table=document.getElementById("myTable");
+          
+          tr=table.getElementsByTagName("tr");
+          
+          for (i = 0; i < tr.length; i++) {
+               
+              td=tr[i].getElementsByTagName("td")[0];
+              
+              if(td){
+              
+             textValue=td.textContent || td.innerText;
+
+              if(textValue.toUpperCase().indexOf(filter) > -1){
+                  
+                  tr[i].style.display= "";
+                  
+              }else{
+                  
+                  tr[i].style.display= "none";
+                  
+              }
+              
+          }
+          
+      }
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+  </script>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,178 @@
+<html>
+<head>
+<style> 
+    
+    *{
+        
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    body{
+        
+        background-color:#111;
+    }
+    
+    .btn1{
+        
+        padding: 20px 50px;
+        width: 280px;
+        background-color:#555;
+        position: fixed;
+        right: 30px;
+        bottom: 25px;
+        opacity: 0.8;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .chat-pop{
+        
+        position: fixed;
+        bottom: 0; 
+        display: none;
+        right: 15px;
+    }
+    
+    .from-container{
+        
+        max-width: 300px;
+        padding: 50px;
+        background-color: #fff;
+    }
+    
+    .from-container h1{
+        
+        text-align: center;
+    }
+    
+    .from-container lable{
+    
+    }
+    
+    textarea{
+        
+        width: 100%;
+        height:100px;
+        margin-top:20px;
+        resize: none;
+    }
+    
+    .btn{
+        
+        display: block;
+        width: 100%;
+        padding:10px 30px;
+        border: none;
+        margin-top:10px;
+        cursor: pointer;
+        color: #fff;
+       }
+    
+    .send{
+        
+        background-color:green;
+    }
+    
+    .cancle{
+        
+        background-color: red;
+    }
+    
+</style>    
+</head>
+<body>
+
+    
+    
+    <button class="btn1" onclick="openChat()">Chat</button>
+    
+    
+   <div class="chat-pop" id="myFrom">
+    
+    <form class="from-container">
+       
+        <h1>Chat</h1>
+        
+        <label class="chat">Message</label>
+       
+        <textarea placeholder="Type Message...." required></textarea>
+        
+        <button class="btn send">Send</button>
+        
+        <button class="btn cancle" onclick="closeCancle()">Cancle</button>
+        
+        
+    </form>
+    
+    
+   </div>
+    
+    
+<script>
+
+    
+    let myFrom=document.getElementById("myFrom");
+    
+    
+    function openChat(){
+        
+        myFrom.style.display="block";
+    }
+    
+    function closeCancle(){
+        
+        myFrom.style.display="none";
+    }
+    
+    
+    
+    
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

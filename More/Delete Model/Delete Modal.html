@@ -1,0 +1,207 @@
+<html>
+<head>
+<style>
+    *{
+        margin:0px;
+        box-sizing: border-box;
+    }
+    
+    .btn1{
+        
+        width: 100%; 
+        padding: 15px;
+        font-size: 2em;
+        background-color: green;
+        color: #fff;
+        outline: none;
+        border:none;
+    }
+    
+    .btn1:hover{
+        
+        opacity: 0.8;
+    }
+    
+    .container{
+        
+        display:none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding-top:10%;
+        background-color: #818181;
+    }
+    
+    
+    .btn2{
+        
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        font-size:3em;
+        font-weight:bold;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .btn2:hover{
+        
+        color: #111;
+    }
+    
+    
+    .content{
+
+          padding: 16px;
+          text-align: center;  
+    }
+    
+    
+    @media screen and (max-width:600px){
+        
+        .content{
+            padding: 0;
+            margin: 0;
+        }
+    }
+    
+    .content h1{
+        
+        
+        padding: 2px;
+    }
+    
+    .content p{
+        
+
+        padding: 3px;
+        padding-bottom:20px;
+    }
+    
+    .model{
+        
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; 
+        border: 1px solid #888;
+        width: 50%;
+        height:200px;
+    }
+    
+    .btns{
+        text-align: center;
+    }
+    
+    .btn3,.btn4{
+    
+        float: left;
+        padding:10px;
+        font-size: 1.5em;
+        width:50%;
+        border: none;
+        color: #fff;
+        outline:none;
+        cursor: pointer;
+    }
+    
+    
+    
+    .btn3{
+        
+        background-color: #ddd;
+        color: #111;
+    }
+    
+    .btn4{
+        
+        background-color: red;
+    }
+    
+    
+</style>
+</head>
+<body>
+
+    
+    
+    <button class="btn1" onclick="document.getElementById('models').style.display='block';">Open Model</button>
+    
+    
+    <div class="container" id="models">
+    
+        <span class="btn2" onclick="document.getElementById('models').style.display='none';">&times;</span>
+        
+        
+    <form class="model"> 
+        
+        <div class="content">
+        
+            <h1>Delete Account</h1>
+            <p>Are you sure you want to delete your account?</p>
+            
+            
+            <div class="btns">
+        
+            <button class="btn3" onclick="document.getElementById('models').style.display='none';">Cancel</button>
+            <button class="btn4" onclick="document.getElementById('models').style.display='none';">Delete</button>
+            
+           </div>
+            
+        </div>
+        
+    </form>
+        
+        
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>    
+</html>

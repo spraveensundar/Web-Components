@@ -1,0 +1,178 @@
+<html>                                                  
+<head>
+<title>VerticalTab</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+</head>
+    
+    
+    <style>
+        
+        
+        *{
+            
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+    
+    
+        .tab{
+            
+             float: left;
+             border: 1px solid #ccc;
+             background-color: #f1f1f1;
+             width: 30%;
+             height: 300px;
+        }
+        
+         button{
+     
+             
+             display: block;
+             background-color: inherit;
+             color: black;
+             padding: 22px 16px;
+             width: 100%;
+             border: none;
+             outline: none;
+             text-align: left;
+             cursor: pointer;
+             transition: 0.3s;
+             font-size: 17px;
+           
+                          
+            
+        }
+        
+        .tabcontent{
+            
+
+                float: left;
+                padding: 0px 12px;
+                border: 1px solid #ccc;
+                width: 70%;
+                border-left: none;
+                height: 300px;
+        }
+        
+        .tabcontent p{
+            padding: 60px;
+        }
+        
+        
+        .acctive,button:hover{
+            
+            background-color: yellow;
+            
+        }
+        
+        
+        
+    
+    </style>
+    
+    
+    
+    
+<body>
+    
+    
+    
+    
+    <div class="tab">
+    
+        <button class="tablink" onclick="oncity(event,'London')" id="ShowTab">London</button>
+        <button class="tablink" onclick="oncity(event,'Paris')">Paris</button>
+        <button class="tablink" onclick="oncity(event,'Tokyo')">Tokyo</button>
+        
+    </div>
+    
+    
+    <div  id="London" class="tabcontent">
+    
+        <h1>London</h1>
+    
+        <p>London is the capital city of England.</p>
+    
+    </div>
+    
+    
+     <div  id="Paris" class="tabcontent">
+    
+        <h1>Paris</h1>
+    
+        <p>Paris is the capital of France.</p>
+    
+    </div>
+    
+     <div  id="Tokyo" class="tabcontent">
+    
+        <h1>Tokyo</h1>
+    
+        <p>Tokyo is the capital of Japan.</p>
+    
+    </div>
+    
+    
+    
+
+<script>
+    
+
+    function oncity(evt,cityName){
+        
+        let tabcontent,tablink;
+        
+        
+        tabcontent=document.getElementsByClassName("tabcontent");
+        
+        for(i = 0; i < tabcontent.length; i++){
+            
+            tabcontent[i].style.display="none";
+        }
+        
+        
+        tablink=document.getElementsByClassName("tanlink")
+        
+        for(i = 0; i < tablink.length; i++){
+            
+            tablink[i].className=tablink[i].className.replace("active")
+        }
+        
+        
+        
+        document.getElementById(cityName).style.display="block"
+        
+    }
+    
+    
+    
+    document.getElementById("ShowTab").click();
+    
+    
+    
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+</body> 
+</html>
+    

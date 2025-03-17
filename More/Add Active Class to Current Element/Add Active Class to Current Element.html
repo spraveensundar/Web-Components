@@ -1,0 +1,144 @@
+<html>
+<head>
+<style>
+    
+    *{
+        
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    #myUl{
+        
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+    }
+    
+    .btn{
+        
+  
+        display: inline-block;
+        padding: 20px 30px;
+        background-color: #111;
+        color: #fff;
+        font-weight: bold;
+        font-size: 2em;
+        cursor: pointer;
+    }
+    
+    .active, .btn:hover{
+        
+        background-color: #818181;
+    }
+    
+    
+    
+    
+    
+    
+</style>
+</head>
+<body>
+
+    
+    <ul id="myUl">
+    
+        <li class="btn">1</li>
+        <li class="btn active">2</li>
+        <li class="btn">3</li>
+        <li class="btn">4</li>
+        <li class="btn">5</li>
+        
+    </ul>
+    
+    <script>
+    
+        
+        let ul=document.getElementById("myUl");
+        
+        let li=ul.getElementsByClassName("btn");
+        
+        for(var i = 0; i < li.length; i++){
+                
+            li[i].addEventListener("click",function(){
+                
+                let actives=document.getElementsByClassName("active");
+                
+                actives[0].className=actives[0].className.replace(" active","");
+                
+                this.className +=" active"
+                
+                
+            })
+        }
+        
+        
+        
+        
+    
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

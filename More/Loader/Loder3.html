@@ -1,0 +1,126 @@
+<html>
+<head>
+<style>
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    #loader{
+        
+        position: absolute;
+        border: 20px solid #ddd;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border-top: 20px solid red;
+        left: 50%;
+        top: 50%;
+        margin:  -76px 0 0 -76px;   
+        animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin{
+        
+        0%{transform: rotate(0deg)}
+        100%{transform: rotate(360deg)}
+        
+    }   
+    
+    
+    #myDiv{
+        
+        display: none;
+        text-align: center;
+    }
+    
+    .animate-bottom{
+        
+        position: relative;
+        animation-name:animatebottom;
+        animation-duration:1s;        
+    }
+    
+    @keyframes animatebottom{
+        
+        from{bottom:-100px;opacity:0;}
+        to{bottom:0px;opacity:1;}
+    }
+    
+    
+</style>    
+</head>
+<body onload="myFunction()">
+
+    
+    
+    <div id="loader"></div>
+    
+    
+    <div class="animate-bottom" id="myDiv" style="display: none">
+    
+        <h1>Tesla!</h1>
+        <p>Some text some text some text............</p>
+        
+    </div>
+    
+
+    
+    <script>
+        
+        var mytime;
+        
+        
+        function myFunction(){
+            
+            mytime=setTimeout(showpage,3000);
+        }
+        
+        
+        function showpage(){
+            
+            
+            document.getElementById("loader").style.display="none";
+            document.getElementById("myDiv").style.display= "block";
+            
+
+        }
+        
+        
+    
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

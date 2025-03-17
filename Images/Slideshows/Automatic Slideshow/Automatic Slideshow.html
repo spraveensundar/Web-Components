@@ -1,0 +1,209 @@
+<html>                                                  
+<head>
+<title>Automatic Slideshow</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+    *{
+        
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    img{
+        
+        width: 100%;
+        vertical-align:middle;
+    }
+    
+    
+    .slide-container{
+        
+        position: relative;
+        max-width: 1000px;
+        margin: auto;
+    
+    }
+    
+    
+    .numbertext{
+        
+        position: absolute;
+        color:red;
+        font-size:2em;
+        font-weight:bold;
+        padding: 10px;
+    }
+    
+    
+   .select{
+        
+       text-align: center;
+     
+    }
+    
+    
+    .dot{
+        
+        width: 30px;
+        height: 30px;
+        background-color:red;
+        border-radius:50%;
+        margin-top: 30px;
+        display: inline-block;
+    }
+    
+    .active{
+        
+        background-color:yellow;
+    }
+    
+   
+    
+    
+</style>
+</head>
+<body>
+    
+
+    
+    <div class="slide-container">
+    
+        <div class="slide">
+        
+            <div class="numbertext">1 / 3</div>
+            <img src="img1.jpeg">
+
+        </div>
+        
+        
+        <div class="slide">
+        
+            <div class="numbertext">2 / 3</div>
+            <img src="img2.jpeg">
+
+        </div>
+        
+        
+        <div class="slide">
+        
+            <div class="numbertext">3 / 3</div>
+            <img src="img3.jpeg">
+
+        </div>
+        
+    </div>
+    
+    
+    <div class="select">
+    
+        <div class="dot" onclick="current(1)"></div>
+        <div class="dot" onclick="current(2)"></div>
+        <div class="dot" onclick="current(3)"></div>
+        
+    </div>
+    
+    
+  <script>
+  
+      let slidesIndex=0;
+      
+      slideShow();
+      
+      
+      function current(n){
+          
+          slideShow(n);
+      }
+      
+      
+      function slideShow(n){  
+          
+      let i;      
+          
+          
+      let slide=document.getElementsByClassName("slide");
+      let dot=document.getElementsByClassName("dot");
+    
+      
+      for(i = 0; i < slide.length; i++){
+          
+          slide[i].style.display="none";
+      }
+      
+      slidesIndex++;
+      
+      if(slidesIndex > slide.length){slidesIndex=1}
+      
+      for(i = 0;   i < dot.length; i++){
+          
+          dot[i].className=dot[i].className.replace(" active","");
+      }
+        
+      
+      slide[slidesIndex-1].style.display="block";
+      dot[slidesIndex-1].className +=" active";
+      setTimeout(slideShow,2000);
+      
+      
+    
+      }
+
+      
+      
+      
+      
+      
+      
+  </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

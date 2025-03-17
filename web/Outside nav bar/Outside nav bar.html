@@ -1,0 +1,199 @@
+<html>                                                  
+<head>
+<title>Dropdown Menu in Navbar</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    .toggle{
+        
+        position:fixed;
+        right: 20px;
+        top: 30px;
+        width: 50px;
+        height:50px;
+        background-color: red;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    
+    .toggle::before{
+        
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        transform: translateY(5px);
+        transition: 0.3s;
+        
+    }
+    
+     .toggle::after{
+        
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        transform: translateY(-5px);
+        transition: 0.3s;
+        
+    
+    }
+    
+    
+    .toggle.active::after{
+        
+        transform:translateY(0) rotate(45deg)
+    }
+    
+    .toggle.active::before{
+            
+        transform:translateY(0) rotate(-45deg)
+    }
+    
+    
+    .sidebar{
+        
+        position: fixed;
+        background-color:red;
+        height:100vh;
+        width: 250px;
+        left:-300px;
+        top: 0;
+        transition: 0.5s;
+        padding-top: 40px;
+    }
+    
+    
+    .sidebar ul{
+        
+        list-style: none;
+    }
+    
+    .sidebar a{
+        
+        text-decoration: none;
+        font-size: 2em;
+        color: #111;
+        display: block;
+        padding: 30px;
+        cursor: pointer;
+    }
+    
+    .sidebar a:hover{
+        
+        color: #fff;
+    }
+    
+   
+    .sidebar.active{
+        
+        left: 0;
+    }
+    
+    
+    
+    
+    
+    
+</style>
+</head>
+<body>
+    
+    
+    
+    <div class="toggle" id="toggle"></div>
+    
+    
+    <div class="sidebar" id="sidebar">
+    
+        <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+            
+        </ul>
+        
+    </div>
+    
+  
+<script>
+
+    const toggle=document.getElementById("toggle");
+    
+    const sidebar=document.getElementById("sidebar");
+    
+    document.onclick=function(r){
+        
+        if(r.target.id!== "sidebar" && r.target.id !== "toggle"){
+            
+            
+            toggle.classList.remove("active");
+            sidebar.classList.remove("active")
+            
+            }
+    }
+    
+    toggle.onclick=function(){
+        
+        toggle.classList.toggle("active");
+        sidebar.classList.toggle("active")
+    }
+    
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

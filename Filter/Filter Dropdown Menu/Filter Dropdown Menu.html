@@ -1,0 +1,227 @@
+<html>
+<head>
+<style>
+    *{
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    
+    
+    
+    .dropdown{
+        
+    
+        width: 100%;
+    }
+    
+    .btn{
+        
+        padding: 20px 20px;
+        font-size: 2em;
+        border:none;
+        outline: none;
+        background-color: green;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .btn:hover{
+        
+        opacity: 0.8;
+    }
+    
+    .dropdown-content{
+        
+        position: absolute;
+        min-width:189px;
+        display: none;
+        border: 3px solid #ddd;
+        border-radius: 5px;
+    }
+    
+   
+    
+    
+    .dropdown-content input{
+        
+        width: 100%;
+        border: 3px solid #ddd;
+        outline: none;
+        padding:15px;
+        font-size: 1.5em;
+        border-radius: 5px;
+    }
+    
+    .dropdown-content input:hover{
+        
+        border: 3px solid #111;
+    }
+    
+    .dropdown-content a{
+        
+        display: block;
+        text-decoration: none;
+        font-size: 2em;     
+        padding:20px;
+        color: #111;
+    }
+    
+    .dropdown-content a:hover{
+        
+        background-color: #ddd;
+    }
+    
+    .show{
+        
+        display:block;
+    }
+    
+</style>
+</head>
+<body>
+    
+    
+    
+    
+    <div class="dropdown">
+    
+        <button class="btn" onclick="show()">Dropdown</button>
+    <div class="dropdown-content" id="dropdown">
+        
+        <input type="search" placeholder="Search...." onkeyup="myFunction()" id="myInput">
+        <a href="#">Home</a>
+        <a href="#">Custome</a>
+        <a href="#">Service</a>
+        <a href="#">Conact</a>
+        <a href="#">About</a>        
+        <a href="#">Blog</a>        
+    </div>
+    </div>
+    
+<script>
+    
+    
+    function show(){
+        
+        
+        document.getElementById("dropdown").classList.toggle("show");
+    }
+    
+    
+    
+    function myFunction(){
+        
+        
+        let input,filter,a,i,div,textVlaue;
+        
+        input=document.getElementById("myInput");
+        
+        filter=input.value.toUpperCase();
+        
+        div=document.getElementById("dropdown");
+        
+        a=div.getElementsByTagName("a");
+        
+        
+        for(i = 0; i < a.length; i++){
+        
+            if(a){
+                
+                textVlaue=a[i].textContent || a[i].innerText;
+                
+                if(textVlaue.toUpperCase().indexOf(filter) > -1){
+                    
+                    a[i].style.display="";
+                }
+                else{
+                    
+                    a[i].style.display="none";
+                }
+                
+            }
+        
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

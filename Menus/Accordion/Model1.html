@@ -1,0 +1,208 @@
+<html>                                                  
+<head>
+    
+    <title>JavaScript-HTML</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link  href="Style.css" rel="stylesheet" type="text/css"  >
+
+    <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+    </head>
+    <body>
+        
+        
+        
+        
+        <style>
+        
+            
+            .btn{
+                
+                width: 100%;
+                padding:20px;
+                border: none;
+                font-size: 1em;
+                text-align: left;
+            }
+            
+            
+            .active,.btn:hover{
+                
+                background-color: #ddd; 
+            }
+            
+            
+            .active,.panel{
+                
+                padding:20px;
+                word-spacing:3px;
+                
+            }
+            
+            
+            .panel{
+                
+                display: none;
+            }
+            
+        
+        </style>
+        
+
+        
+
+        
+        
+        
+    
+       
+    
+    
+    
+    
+    
+    
+    
+        
+        <button class="btn">Section 1</button>
+        <div class="panel">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+    
+    
+    
+        <button class="btn">Section 2</button>
+        <div class="panel">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        
+        
+        <button class="btn">Section 3</button>
+        <div class="panel">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+    
+    
+    
+        
+    <script>
+        
+    
+        
+        var acc=document.getElementsByClassName("btn");
+        
+        var i;
+        
+        
+        for(i=0;i<acc.length;i++){
+            
+            
+            acc[i].addEventListener("click",function(){
+                
+                this.classList.toggle("active");
+                
+                var content=this.nextElementSibling;
+                
+                if(content.style.display==="block"){
+                    
+                    content.style.display="none";
+                }
+                
+                else{
+                    
+                    content.style.display="block"
+                }
+                
+                
+            })
+            
+        }
+    
+        
+        
+    
+        
+        
+        
+        
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

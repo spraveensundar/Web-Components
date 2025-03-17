@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>                                                  
+<head>
+<title>JavaScript-HTML</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+</head>
+<body>
+  
+    
+    <div class="container" id="bimg">
+    
+       
+        <nav>
+        
+            <img src="logo.png" class="logo">
+            <a href="#" class="btn" onclick="opentab()">Test Drive</a>
+            
+        </nav>
+        
+        
+        <div class="content">
+        
+        <h2>THE BMW</h2>
+            
+        <h1>G 310 R</h1>
+        
+        
+        <p>The strength of the G 310 R is in its lightness and agility. The 313 ccm single-cylinder four-stroke engine not only delivers fun in the big-city tumult, but also when you are redefining the city limits when changing corners quickly.</p>    
+
+        <h3>Choose your color</h3>
+
+                
+        </div>
+        
+        
+        <div class="Section">
+        
+            <div id="red" class="btn2"></div>
+            <div id="black" class="btn2"></div>
+            <div id="blue" class="btn2"></div>
+            
+        </div>
+    
+      <div class="login" id="logins">
+        
+          <h2 class="fromlogo">Login</h2>
+          
+        <form class="froms" >
+        
+            <label class="lables">Email</label>
+            <input type="text" required>
+            
+            <label class="lables">Password</label>
+            <input  type="password" required>
+            
+            <a href="#" class="open btns">Login</a>
+            <a href="#" class="close btns" onclick="closetab()">Cancel</a>
+            
+        </form>
+        
+    </div>
+        
+    </div>
+    
+     
+   <script>
+ 
+       let bike=document.getElementById("bimg");
+       
+       
+       let redbtn=document.getElementById("red");
+       let blackbtn=document.getElementById("black");
+       let bluebtn=document.getElementById("blue");
+       
+       redbtn.onclick=function(){
+           
+           bike.style.backgroundImage="url(BMW1.png)";
+           
+       }
+       
+       
+       blackbtn.onclick=function(){
+           
+           bike.style.backgroundImage="url(BMW3.png)"
+       }
+       
+       bluebtn.onclick=function(){
+           
+           bike.style.backgroundImage="url(BMW2.png)"
+       }
+    
+       
+    
+    let ctn=document.getElementById("logins");
+    
+       
+    function opentab(){
+        
+        if(ctn.style.display==="block"){
+            
+            ctn.style.display="none";
+        }
+        else{
+            
+            ctn.style.display="block";
+        }
+    }
+       
+    function closetab(){
+        
+        ctn.style.display="none";
+    }
+       
+       
+       
+   </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body> 
+</html>
+

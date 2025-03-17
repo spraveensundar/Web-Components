@@ -1,0 +1,244 @@
+<html>                                                  
+<head>
+<title>Tabs</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+</head>
+<style>
+
+    
+    *{
+        
+        margin: 0px;
+        padding: 0px;
+        box-sizing:border-box;
+        font-family: sans-serif;
+    }
+    
+    
+    .tab{
+        
+        background-color: #ccc;
+        border: 1px solid #ddd;
+        overflow: hidden;
+    }
+    
+    .tab button{
+        
+        background-color:inherit;
+        border: none;
+        outline: none;
+        padding: 20px 40px;
+        font-size: 1.5em;
+        
+    }
+    
+    
+    .tabcontent{
+        
+        background-color:yellow;
+        border: 1px solid #ddd;
+        padding: 30px;
+        display: none;
+    }
+    
+    
+    button:hover{
+        
+        background-color:rosybrown;
+    }
+    
+</style>
+    
+    
+    
+    
+    
+<body>
+    
+    
+    
+    
+    <div class="tab">
+    
+        <button class="tablink" onclick="oncity(event,'London')">London</button>
+        <button class="tablink" onclick="oncity(event,'Paris')">Paris</button>
+        <button class="tablink" onclick="oncity(event,'Tokyo')">Tokyo</button>
+        
+    </div>
+
+    
+    
+    <div  id="London" class="tabcontent">
+        <h1>London</h1>
+        <br>
+        <br>
+        <p>London is the capital city of England.</p>
+    </div>
+  
+    <div  id="Paris" class="tabcontent">
+        <h1>Paris</h1>
+        <br>
+        <br>
+        <p>Paris is the capital of France.</p>
+    </div>
+    
+    <div  id="Tokyo" class="tabcontent">
+        <h1>Tokyo</h1>
+        <br>
+        <br>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+    
+<script>
+    
+
+    function oncity(evt,cityName){
+        
+        var i,tabcontent,tablink;
+        
+        tabcontent=document.getElementsByClassName("tabcontent");
+        
+        for(i = 0; i < tabcontent.length; i++){
+            
+            tabcontent[i].style.display="none";
+        }
+        
+        tablink=document.getElementsByClassName("tablink");
+        
+        for(i = 0; i < tablink.length; i++){
+            
+            tablink[i].className=tablink[i].className.replace("active");
+        }
+        
+        
+        
+        document.getElementById(cityName).style.display="block";
+        
+        evt.currentTarget.className +="active";
+        
+        
+    }
+    
+    
+    
+    
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+</head>
+<body>
+
+    
+    
+    <label for="checkbox">Checkbox:</label>
+    <input id="checkbox" type="checkbox" name="checkbox" onclick="myFunction()">
+    
+    <h1 id="text" style="display: none;">Checkbox is CHECKED!</h1>
+    
+    <script>
+    
+        function myFunction(){
+            
+            let checkbox=document.getElementById("checkbox")
+            
+            let text=document.getElementById("text");
+            
+            if(checkbox.checked == true){
+                
+                text.style.display="block";
+            }else{
+                
+                text.style.display="none";
+            }
+        }
+        
+        
+        
+    
+    </script>
+    
+    
+    
+    
+</body>
+</html>

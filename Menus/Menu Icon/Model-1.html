@@ -1,0 +1,84 @@
+<html>                                                  
+<head>
+    
+    <title>Menu Icon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+    
+    </head>
+    <style>
+    
+        
+        .container{
+            
+            margin: 50px;
+            transition:.5s ease;
+        }
+        
+        
+        .div1,.div2,.div3{
+            
+            width:150px;
+            height:20px;
+            color: black;
+            margin:20px;
+            background-color: black;
+            transition:.5s ease
+        }
+        
+        .change .div2{
+            
+            opacity:0;
+        }
+        
+        .change .div1{
+            
+            opacity: 1;
+            transform: rotate(-45deg)translate(-30px,30px)
+            
+        }
+        
+        .change .div3{
+            
+            opacity: 1;
+            transform: rotate(45deg) translate(-30px,-30px)
+            
+        }
+        
+        
+    
+    </style>
+
+    <body>
+    
+        
+        
+        <div class="container" onclick="myFunction(this)">
+        
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div3"></div>
+        
+        </div>
+        
+        
+        
+        <script>
+        
+        function myFunction(x){
+        
+            
+            x.classList.toggle("change")
+        
+        }
+            
+            
+        </script>
+        
+        
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,205 @@
+<html>                                                  
+<head>
+<title>ColseTab</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+</head>
+    
+    
+    <style>
+    
+        
+        .tab{
+            
+            border: 2px solid #ddd;
+            background-color: #f1f1f1;
+        }
+        
+        .tablink{
+            
+            padding:15px  30px;
+            border: none;
+            outline: none;
+            background-color: inherit;
+            font-size: 20px;
+        }
+        
+        .tabcontent{
+            
+            padding: 20px;
+            display: none;
+            border: 2px solid #ddd;
+            border-top: none;
+            background-color: #f1f1f1;
+        }
+        
+        
+        span{
+            
+            float: right;
+            font-size: 2em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+    </style>
+  
+<body>
+    
+    <div class="tab">
+    
+        <button class="tablink" onclick="oncity(event,'London')" id="ShowTab">London</button>
+        <button class="tablink" onclick="oncity(event,'Paris')">Paris</button>
+        <button class="tablink" onclick="oncity(event,'Tokyo')">Tokyo</button>
+        
+    </div>
+    
+    
+    <div id="London" class="tabcontent">
+        <span onclick="this.parentNode.style.display='none';">&times</span>
+        <h1>London</h1>
+        <p>London is the capital city of England.</p>
+        
+    </div>
+    
+    
+    <div id="Paris" class="tabcontent"> 
+        <span onclick="this.parentNode.style.display='none';">&times</span>
+        <h1>Paris</h1>
+        <p>Paris is the capital fo France.</p>
+        
+    </div>
+    
+    <div id="Tokyo" class="tabcontent">
+        <span onclick="this.parentNode.style.display='none';">&times</span>
+        <h1>Tokyo</h1>
+        <p>Tokyo is the capital of Japan.</p>
+        
+    </div>
+    
+    
+<script>
+
+
+    function oncity(event,cityName){
+        
+        let tablink,tabcontent,i;
+    
+        tabcontent=document.getElementsByClassName("tabcontent");
+        
+        
+        for(i = 0; i < tabcontent.length; i++){
+            
+            tabcontent[i].style.display="none";
+        }
+        
+        
+       document.getElementById(cityName).style.display="block"
+        
+    
+        
+    }
+    
+    
+    
+    document.getElementById("ShowTab").click();
+    
+    
+    
+    
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

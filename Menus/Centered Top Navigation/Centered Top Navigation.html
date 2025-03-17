@@ -1,0 +1,164 @@
+<html>                                                  
+<head>
+<title>Centered Top Navigation</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+ 
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    .navbar{
+        
+        position: relative;
+        background-color: #111;
+        overflow: hidden;
+    }
+    
+    .navbar a{
+        
+        float: left;
+        display: block;
+        font-size: 2em;
+        padding: 20px;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    
+     .navbar-center a{
+        
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%)
+         
+    }
+    
+    .navbar a:hover{
+        
+        background-color: #ddd;
+        color: #111;
+    }
+    
+    
+    
+    .navbar a.active{
+        
+        background-color: green;
+        color: #fff;
+    }
+    
+   
+    
+    
+    .navbar-right{
+        
+        float: right;
+    }
+    
+    
+    @media screen and (max-width:600px){
+        
+        .navbar a, .navbar-right{
+            
+            float: none;
+            
+        }
+           
+    }
+    
+    
+    @media screen and (max-width:600px){
+        
+        
+        .navbar-center a{
+            
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+            
+        }
+    }
+ 
+    
+   
+    
+    
+    
+    
+    
+</style>
+</head>
+<body>
+        
+    
+    
+    <div class="navbar">
+        
+        
+        <div class="navbar-center">
+         
+            <a href="#home" class="active">Home</a>
+            
+        </div>
+        
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        
+        
+        <div class="navbar-right">
+            
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

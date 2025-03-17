@@ -1,0 +1,275 @@
+<html>                                                  
+<head>
+<title>HoverTabs</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+</head>
+    
+    <style>
+    
+        *{
+        
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        
+        }
+        
+        
+        .tab{
+            
+            float: left;
+            border: 1px solid #ddd;
+            background-color:#f1f1f1;
+            height:100vh;
+            width: 300px;
+        }
+        
+        .tablink{
+            
+            
+            width: 300px;
+            border: none;
+            outline: none;
+            background-color: inherit;
+            padding: 23px 10px;
+            display: block;
+            text-align: left;
+            font-size:30px;
+           
+        }
+        
+        .tablink:hover{
+            
+            background-color: #ddd;
+        }
+        
+        
+        .tabcontent{
+         
+            text-align: center;
+            display: none;
+            font-size: 2em;
+            background-color:#ddd;
+            padding:100px;
+            height:100vh;
+        }
+        
+        
+    
+    </style>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<body>
+
+    
+    <div class="tab">
+    
+        
+        <button class="tablink" onmouseover="myFunction('London',event)">London</button>
+        <button class="tablink" onmouseover="myFunction('Paris',event)">Paris</button>
+        <button class="tablink" onmouseover="myFunction('Tokyo',event)">Tokyo</button>
+        
+        
+    </div>
+    
+    
+    <div id="London" class="tabcontent">
+    
+        <h1>London</h1>
+        <p>London is the capital city of England.</p>
+        
+    </div>
+    
+    
+    <div id="Paris" class="tabcontent">
+    
+        <h1>Paris</h1>
+        <p>Paris is the capital of France.</p>
+        
+    </div>
+    
+    
+    
+    
+    <div id="Tokyo" class="tabcontent">
+    
+        <h1>Tokyo</h1>
+        <p>Tokyo is the capital of Japan.</p>
+        
+    </div>
+    
+
+<script>
+
+
+        function myFunction(cityName,evt){
+
+
+            let tablink,tabcontent,i;
+
+            tabcontent=document.getElementsByClassName("tabcontent");
+
+            for(i=0;i<tabcontent.length;i++){
+
+                tabcontent[i].style.display="none";
+            }
+
+            tablink=document.getElementsByClassName("tablink");
+
+            for(i=0;i<tablink.length;i++){
+
+              tablink[i].className=tablink[i].className.replace("active")
+
+
+            }
+
+
+            document.getElementById(cityName).style.display="block";
+
+            evt.currentTarget.className += " active "
+
+
+
+        }
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

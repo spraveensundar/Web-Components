@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+    
+    .btn{
+        
+        outline: none;
+        border: none;
+        background-color: red;
+        color: #fff;
+        font-weight: bold;
+        width: 300px;
+        font-size: 2em;
+        padding: 30px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    .btn span{
+        
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        transition: 0.5s;  
+    }
+    
+    
+    .btn span::after{
+        
+        content: "\00bb";
+        position:absolute;
+        top: 0;
+        opacity: 0;
+        transition: 0.5s;
+        right:-20px;
+    }
+    
+    .btn:hover span{
+        
+        padding-right: 30px;
+    }
+    
+    .btn:hover span:after{
+        
+        opacity: 1;
+        right: 0;
+    }
+    
+    
+    
+    
+</style>
+</head>
+<body>
+    
+    
+    
+    <button class="btn"><span>Button</span></button>
+    
+    
+    
+</body>
+</html>

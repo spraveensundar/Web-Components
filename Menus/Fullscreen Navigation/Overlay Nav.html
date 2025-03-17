@@ -1,0 +1,223 @@
+<html>                                                  
+<head>
+<title>Overlay Nav</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    .navbar{
+        
+        width:0;
+        height: 100vh;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        overflow-x:hidden;
+        transition: 0.5s;
+        background-color:rgba(0,0,0,0.8);
+        
+    }
+    
+    .navbar .close{
+        
+        position: absolute;
+        color: #ddd;
+        right: 0;
+        font-size: 3em;
+        padding: 30px;
+    }
+    
+    .navbar .overlay{
+        
+        position: relative;
+        top:15%;
+        width: 100%;   
+        text-align: center;  
+    }
+    
+    
+    
+    .navbar .overlay a{
+        
+        display: block;
+        text-decoration: none;
+        font-size: 2em;
+        padding: 30px;
+        color: #fff;
+    }
+    
+    
+    
+    .navbar a:hover{
+        
+        color: yellow;
+    }
+    
+    .open{
+        
+        font-size: 2em;
+    }
+    
+    .content{
+        
+        text-align:center;
+    }
+    
+    
+    
+    
+    
+    
+</style>
+</head>
+<body>
+
+    
+    
+    
+    <div class="navbar" id="mynav">
+    
+        
+        <a class="close" onclick="closeNav()">&times;</a>
+        
+    
+        <div class="overlay">
+        
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+        
+        </div>
+            
+    </div>
+    
+    <span class="open" onclick="openNav()">&#9776;open</span>
+    
+    
+    <div class="content" id="text">
+    
+        <h1>Some Text.....................</h1>
+        
+    </div>
+    
+   
+<script>
+
+    
+    function openNav(){
+        
+        document.getElementById("mynav").style.width="100%";
+    }
+    
+  
+    
+    
+     function closeNav(){
+        
+        document.getElementById("mynav").style.width="0";
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

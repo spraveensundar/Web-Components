@@ -1,0 +1,206 @@
+<html>                                                  
+<head>
+<title>FilterSearch/List</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+
+    *{
+        margin:15px;
+        box-sizing: border-box;
+    }
+    
+    #input{
+        
+        width: 100%;
+        padding:20px;
+        background-color:skyblue;
+        border: 3px solid #ddd;
+        border-radius:3px;
+      font-size:1.5em;
+    }
+    
+    #input:hover{
+        
+        border: 3px solid #111;
+        background-color: #fff;
+    }
+    
+    ul li{
+        
+        list-style: none;
+       
+    }
+    
+    a{
+        text-decoration: none;
+        font-size:1.5em;
+        display: block;
+        width: 100%;
+        margin-top: -15px;
+        padding: 20px;
+        border: 2px solid #ddd;
+        color: #111;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    
+    a:hover{
+        
+        background-color: #ddd;
+    }
+    
+</style>
+</head>
+<body>
+    
+    
+    <input type="search" id="input" onkeyup="myFunction()" placeholder="Search Name">
+    
+    <ul id="myUl">
+    
+        <li><a href="#">Praveen</a></li>
+        <li><a href="#">Sundar</a></li>
+        
+        
+        
+        <li><a href="#">Deo</a></li>
+        <li><a href="#">William</a></li>
+        
+        
+        <li><a href="#">Godson</a></li>
+        <li><a href="#">Vicky</a></li>
+        
+        
+         <li><a href="#">Vipin</a></li>
+        <li><a href="#">Yeasu</a></li>
+        
+        
+        
+         <li><a href="#">Ram</a></li>
+        <li><a href="#">Raja</a></li>
+    
+    </ul>
+    
+<script>
+
+    
+    
+    function myFunction(){
+        
+        
+        var input,filter,ul,li,a,i,textValue;
+        
+        
+        input=document.getElementById("input");
+        filter=input.value.toUpperCase();
+        ul=document.getElementById("myUl");
+        li=ul.getElementsByTagName("li");
+        
+        for(i = 0; i < li.length; i++){
+            
+            a=li[i].getElementsByTagName("a")[0];
+            
+            textValue=a.textContent || a.innerText;
+            
+            if(textValue.toUpperCase().indexOf(filter) > -1){
+                
+                li[i].style.display= "";
+            }
+            
+            else{
+                
+                
+                li[i].style.display= "none";
+            }
+            
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

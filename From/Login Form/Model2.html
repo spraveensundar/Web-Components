@@ -1,0 +1,223 @@
+<html>
+<head>
+<style>
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    
+    form{
+        
+        position: relative;
+        width:600px;
+        margin:0px 300px;
+        height: 100vh;
+        margin-right:100px;
+        box-shadow:0px 0px 22px 10px rgba(0,0,0,0.1);
+        animation-name: zoom;
+        background-color: #fff;
+        animation-duration:0.5s;
+    }
+    
+    @keyframes zoom{
+        
+        from{transform: scale(0)};
+        to{transform: scale(0)};
+    }
+    
+    .person{
+        
+        text-align: center;
+    }
+    
+    img{
+        
+        
+        width:200px;
+        margin:10px;
+        border-radius: 50%;
+    }
+    
+    input[type=email],input[type=password]{
+        
+        width: 100%;
+        padding:10px;
+        margin:6px 0px;
+        display: inline-block;
+        box-sizing:border-box;
+        background-color:lightblue;
+        outline:none;   
+        border: 2px solid #ddd;
+        border-radius:4px;
+    }
+    
+    input[type=email]:hover,input[type=password]:hover{
+        
+        background-color: #fff;
+        border: 2px solid #111;
+    
+    }
+    
+    .btn{
+        
+        width: 100%;
+        padding:10px;
+        margin-top:20px;
+        border:none;
+        background-color: green;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .btn:hover{
+        
+        opacity: 0.6;
+    }
+    
+    .container{
+        
+        padding: 30px;
+    }
+    
+    label{
+        
+        font-weight: bold;
+        font-size: 1.4em;
+    }
+    
+    .btn1{
+        
+        border: none;
+        background-color: red;
+        padding: 10px;
+        color: #fff;
+        
+    }
+    
+    span{
+        
+        float:right;
+        font-size:1.5em;
+    }
+    
+    span a{
+        
+        padding:5px;
+    }
+    
+    .close{
+        
+        position: absolute;
+        right:20px;
+        top: 20px;
+        border:none;
+        outline: none;
+        background-color:inherit;
+        font-size: 3em;    
+        cursor:pointer;
+    }
+
+    .btn2{
+        
+        padding:15px 20px;
+        font-size: 2em;
+        border: none;
+        outline: none;
+        background-color: green;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .btn2:hover{
+        
+        opacity: 0.5;
+    }
+    
+    .model{
+        
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 1;
+        background-color:rgba(0,0,0,0.2);
+    }
+    
+    
+    
+</style>
+</head>
+<body>
+    
+    
+    <button class="btn2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+                                
+    
+    <div id="id01" class="model">
+    
+    <form>
+    
+        <div class="person">  
+            
+            <button class="close" onclick="document.getElementById('id01').style.display='none'">&times;
+            </button>
+            <img src="Sticky%20Images.png">
+        </div>
+        
+        <div class="container">
+        
+        
+        
+        <label for="uname">Username</label>
+        <input type="email" placeholder="Enter Username" name="uname">
+        
+        <label for="pas">Password</label>
+        <input type="password" placeholder="Enter Password" name="pas">
+        
+        <button class="btn">Login</button>
+        
+        <label for="box">
+          <input type="checkbox" name="box">Remember me
+        </label>
+        
+        </div>
+        
+        <div class="container">
+    
+        <button class="btn1" onclick="document.getElementById('id01').style.display='none'">Cancle</button>
+    
+        <span>Forgot<a href="#">password?</a></span>
+    
+        </div>
+        
+    </form>
+    
+    </div>
+
+    <script>
+    
+        var model=document.getElementById('id01');
+        
+        window.onclick=function(event){
+            
+            if(event.target==model){
+                
+                model.style.display="none";
+            }
+        }
+        
+        
+        
+        
+    </script>
+    
+    
+</body>
+</html>

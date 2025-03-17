@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    video{
+        
+        max-height: 100%;
+        max-width: 100vh;
+    }
+    
+    
+</style>    
+</head>
+<body>
+
+    
+    <button onclick="myFunction()">Open Video</button>
+    
+    <p style="padding: 30px"><b>Tip:</b>Press the "Esc" key to exit full screen.</p>
+    
+    <video controls style="width:100%" id="video">
+    
+        <source src="rain.mp4" type="video/mp4">
+        
+    </video>
+    
+    
+    <script>
+    
+        
+        function myFunction(){
+            
+            let fullscreen=document.getElementById("video")
+            
+            if(fullscreen.requestFullscreen){
+                
+                fullscreen.requestFullscreen()
+            }
+        }
+        
+    
+    </script>
+    
+    
+    
+    
+</body>
+</html>

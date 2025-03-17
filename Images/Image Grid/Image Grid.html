@@ -1,0 +1,227 @@
+<html>                                                  
+<head>
+<title>Image Grid</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    .header{
+        
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .btn{
+        
+        border: none;
+        outline: none;
+        padding:15px 20px;
+        font-size:2em;
+    }
+    
+    
+    img{
+        
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    
+    .row{
+        
+        display: flex;
+        flex-wrap:wrap;
+    }
+    
+    
+    .column{
+        
+        flex:30%;
+    }
+    
+    
+    .column img{
+        
+        padding:20px;
+    }
+    
+    .btn.active{
+        
+        background-color: #818181;
+    }
+    
+</style>
+</head>
+<body>
+    
+    
+    <div class="header" id="header">
+    
+        <button class="btn" onclick="one()">1</button>
+        <button class="btn active" onclick="two()">2</button>
+        <button class="btn" onclick="three()">3</button>
+        
+    </div>
+    
+    
+    
+    <div class="row">
+    
+        <div class="column">
+
+            <img src="menu1.jpg">
+            <img src="menu2.jpg">
+            <img src="menu3.jpg">
+            <img src="menu4.jpg">
+            <img src="menu5.jpg">
+            <img src="menu.jpg">
+            
+        </div>
+        
+        
+        <div class="column">
+        
+            <img src="pexels-valeria-boltneva-842571.jpg">
+            <img src="pexels-rajesh-tp-1633578.jpg">
+            <img src="pexels-rajesh-tp-1633495.jpg">
+            <img src="pexels-polina-tankilevitch-4109080.jpg">
+            <img src="pexels-photo-4057748.jpeg">
+        </div>
+        
+        
+        <div class="column">
+        
+             <img src="menu1.jpg">
+            <img src="menu2.jpg">
+            <img src="menu3.jpg">
+            <img src="menu4.jpg">
+            <img src="menu5.jpg">
+            <img src="menu.jpg">
+        </div>
+        
+    
+    </div>
+    
+<script>
+    
+    
+    let element=document.getElementsByClassName("column");
+    
+    var i;
+    
+    
+    function one(){
+        
+        for(i=0;i<element.length;i++){
+            
+            elements[i].style.msFlex ="100%"; 
+            element[i].style.flex="100%";
+        }
+    }
+    
+    
+    
+     
+    function two(){
+        
+        for(i=0;i<element.length;i++){
+            
+             elements[i].style.msFlex = "50%"; 
+            element[i].style.flex="50%";
+        }
+    }
+    
+    
+         
+    function three(){
+        
+        for(i=0;i<element.length;i++){
+            
+             elements[i].style.msFlex = "25%"; 
+            element[i].style.flex="25%";
+        }
+    }
+    
+
+    let header=document.getElementById("header");
+    
+    let btn=header.getElementsByClassName("btn");
+    
+    for( var i=0;i<btn.length;i++){
+        
+        btn[i].addEventListener("click",function(){
+            
+            let current=document.getElementsByClassName("active");
+            
+            current[0].className=current[0].className.replace(" active","");
+            
+            this.className +=" active";
+        })
+    }
+
+
+    
+    
+    
+    
+    
+    
+    
+</script>    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

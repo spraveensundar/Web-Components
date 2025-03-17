@@ -1,0 +1,253 @@
+<html>                                                  
+<head>
+<title>Dropdown Menu in Navbar</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    .navbar{
+        
+        overflow: hidden;
+        background-color: #111;
+    }
+    
+    .navbar a{
+       
+        
+        float: left;
+        padding: 20px;
+        font-size: 2em;
+        color: #fff;
+        text-decoration: none;
+        
+    }
+    
+    
+    .dropdown{
+        
+       float:left;
+        overflow: hidden;
+    
+    }
+    
+      .navbar a:hover, .dropdown:hover .btn, .btn:focus {
+         background-color: red;
+    }
+    
+    .btn{
+        
+        cursor: pointer;
+        font-size:43px;  
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        
+    }
+    
+    .drop-content{
+        
+        position: absolute;
+        min-width:260px;
+        display:none;
+        z-index: 1;
+        background-color: #ddd;
+        margin-top:4px;
+        box-sizing: 0px 17px 3px 0px rgba(0,0,0,0.2);
+    }
+    
+    
+    .drop-content a{
+        
+        float: none;
+        display: block;
+        padding: 30px;;
+    }
+    
+</style>
+    
+   
+</head>
+
+    
+    
+    
+    <div class="navbar">
+        
+        <a href="#home">Home</a>
+        <a href="#Contact">Contact</a>
+        <a href="#About">About</a>
+    
+        <div class="dropdown">
+        
+            <button class="btn" onclick="myFunction()">Dropdown<i class="fa fa-caret-down"></i></button>
+        
+            
+            <div class="drop-content"  id="content">
+            
+                <a href="#link1">Link1</a>
+                <a href="#link2">Link2</a>
+                <a href="#link3">Link3</a>
+            </div>
+        </div>
+    </div>
+    
+    
+<script>
+
+    function myFunction(){
+        
+        
+        var x=document.getElementById("content");
+        
+        if(x.style.display==="block"){
+            
+            x.style.display="none";
+        }else{
+            
+            x.style.display="block";
+        }
+        
+        
+    }
+    
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

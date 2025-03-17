@@ -1,0 +1,246 @@
+<html>
+<head>
+    
+    <style>
+    
+        *{
+            
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        h1{
+            
+            background-color: #818181;
+            padding: 30px;
+            color: #fff;
+        }
+        
+        p{
+            
+            height:200vh;
+            padding: 30px;
+        }
+        
+        .btn{
+            
+            display:none;
+            position: fixed;
+            right:60px;
+            bottom: 60px;
+            border: none;
+            outline: none;
+            padding: 15px 50px;
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+            border-radius:10px;
+            background-color: red;
+            cursor: pointer;
+            transition:top 0.5s ease-in;
+        }
+        
+        
+        
+        
+        
+    </style>
+    
+    
+    
+</head>
+<body>
+    
+    
+    
+    
+    <h1>Scroll Down</h1>
+    
+    <p>Some text...............</p>
+    
+    
+    
+     <button onclick="myFunction()" class="btn" id="mybtn">Top</button>
+    
+   
+ 
+    <script>
+        
+        
+        var myButton=document.getElementById("mybtn");
+        
+        
+        window.onscroll=function() {scrollFunction()};
+        
+        
+        function scrollFunction(){
+            
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                
+                
+                myButton.style.display="block";
+            }
+            
+            else{
+                
+                myButton.style.display="none";
+
+                
+            }
+        }
+        
+        
+        function myFunction(){
+            
+            document.body.scrollTop="0";
+            document.documentElement.scrollTop="0";
+            
+        }
+
+        
+        
+        
+       
+        
+        
+    
+
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

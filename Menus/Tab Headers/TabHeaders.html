@@ -1,0 +1,201 @@
+<html>                                                  
+<head>
+<title>ShowTab</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+</head>
+    
+    
+    <style>
+        
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        
+        
+        .tablink{
+            
+            background-color: #555;
+            color: #fff;
+            width: 25%;
+            border: none;
+            float: left;
+            outline: none;
+            padding:14px 30px;
+            font-size: 2em;
+        }
+        
+        
+        .tabcontent{
+            
+            text-align: center;
+            font-size:2em;
+            display: none;
+            padding: 100px;
+            color: #fff;
+            
+        }
+        
+        .tablink:hover{
+            
+            background-color: #777;
+        }
+        
+        
+        
+        #London{background-color: red;}
+        #Paris{background-color: green;}
+        #Tokyo{background-color: blue;}
+        #Oslo{background-color: yellow;}  
+    
+    </style>
+    
+<body>    
+    
+    
+    
+    
+    
+    
+    <div  id="London" class="tabcontent">
+    
+        <h1>London</h1>
+        <p>London is the capital city of England.</p>
+        
+    </div>
+    
+    
+      <div id="Paris" class="tabcontent">
+    
+        <h1>Paris</h1>
+        <p>Paris is the capital of France.</p>
+        
+    </div>
+    
+    
+      <div id="Tokyo" class="tabcontent">
+    
+        <h1>Tokyo</h1>
+        <p>Tokyo is the capital of Japan.</p>
+        
+    </div>
+    
+    
+      <div id="Oslo" class="tabcontent">
+    
+        <h1>Oslo</h1>
+        <p>Oslo is the capital of Norway.</p>
+        
+    </div>
+    
+    
+    
+    <div class="tab">
+        
+        <button class="tablink" onclick="oncity('London',this,'red')" id="ShowTab">London</button>
+        <button class="tablink" onclick="oncity('Paris',this,'green')">Paris</button>
+        <button class="tablink" onclick="oncity('Tokyo',this,'blue')">Tokyo</button>
+        <button class="tablink" onclick="oncity('Oslo',this,'yellow')">Oslo</button>
+    
+    </div>
+    
+    
+    
+    <script>
+    
+        function oncity(cityName,element,color){
+            
+            let tabcontent,tablink,i;
+            
+            
+            tabcontent=document.getElementsByClassName("tabcontent")
+            
+            for(i = 0; i < tabcontent.length; i++){
+                
+                tabcontent[i].style.display="none";
+            }
+            
+            tablink=document.getElementsByClassName("tablink")
+            
+            for(i = 0; i < tablink.length; i++){
+                
+                tablink[i].style.backgroundColor="";
+            }
+            
+            
+            document.getElementById(cityName).style.display="block";
+            
+            element.style.backgroundColor=color;
+            
+            
+        }
+        
+        document.getElementById("ShowTab").click();
+        
+        
+        
+        
+        
+    
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+
+</html>
+    
+    
+    
+    
+    

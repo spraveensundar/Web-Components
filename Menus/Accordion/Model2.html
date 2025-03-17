@@ -1,0 +1,132 @@
+<html>                                                  
+<head>
+    
+    <title>JavaScript-HTML</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+    <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+    </head>
+    
+    
+
+    <style>
+    
+        
+        .btn{
+            
+            width: 100%;
+            font-size: 1em;
+            padding:30px;
+            text-align: left;
+            border: none;
+            cursor:pointer;
+            outline:none;
+            transition: 0.4s;
+        }
+        
+        .panel{
+            
+        
+            background-color: yellow;
+            padding: 0 10px;  
+            overflow: hidden;
+            max-height:0;
+            transition: max-height 0.2s ease-out;
+            
+        }
+        
+        
+    </style>
+    
+    
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    <button class="btn">Selection 1</button>
+    <div class="panel">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+    
+    
+    <button class="btn">Selection 2</button>
+    <div class="panel">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+    
+    
+    <button class="btn">Selection 3</button>
+    <div class="panel">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+        
+        
+        
+        
+        
+        
+        
+
+    <script>
+    
+        var acc=document.getElementsByClassName("btn");
+        
+        var i;
+        
+        for(i=0;i<acc.length;i++){
+            
+            acc[i].addEventListener("click",function(){
+                
+                this.classList.toggle("active");
+                
+                var panel=this.nextElementSibling;
+                
+                if(panel.style.maxHeight){
+                    
+                    panel.style.maxHeight=null;
+                }
+                else{
+                    
+                    panel.style.maxHeight=panel.scrollHeight+"px";
+                } 
+        
+            }); 
+        }
+    
+        
+        
+        
+    </script>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>

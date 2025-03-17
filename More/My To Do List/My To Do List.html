@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ 
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    
+    .header{
+        
+        width: 100%;
+        height:200px;
+        padding:20px 300px;;
+        text-align: center;
+        background-color:yellow;
+    }
+    
+    h1{
+      
+        font-size: 4em;
+        color: #ffff;
+        padding:10px;
+    
+    }
+    
+    input{
+        
+        
+        margin: 0;
+        float: left;
+        padding:12px;
+        width: 500px;
+        border-radius: 3px;
+       
+    }
+    
+    
+    input:hover{
+        
+        background-color: bisque;
+    }
+    
+    
+    
+    .btn{
+        
+    
+        float:left; 
+        padding: 12px;
+        background-color: #111;
+        color: #fff;
+        text-align: center;
+        width:200px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .btn:hover{
+        
+        background-color: #ddd;
+        color: #111;
+    }
+    
+    .myUl{
+        
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    li{
+        
+        
+        padding: 20px 40px;
+        background-color: #ddd;
+        font-size:1.5em;
+        position: relative;
+    }
+    
+    li:hover{
+        
+        background-color: bisque;
+    }
+    
+    
+    .close{
+        
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 13px 23px;
+        cursor:pointer;
+        font-size:1.5em;
+        font-weight: bold;
+    }
+    
+    
+    .close:hover{
+        
+        background-color: red;
+    }
+    
+    
+     ul li.checked{
+
+        background-color: #111;
+        color: #fff;
+        text-decoration: line-through; 
+    }
+    
+    ul li.checked::before{
+        
+        content: "";
+        position: absolute;
+        border-color: #fff;
+        border-style: solid;
+        border-width: 0px 3px 3px 0;
+        left:10px;
+        transform: rotate(45deg);
+        width: 10px;
+        height:20px;
+        
+    }    
+    
+    
+</style>
+</head>
+<body>
+
+    
+    <div class="header">
+    
+        <h1>My Snapchat User</h1>
+        <input type="text" placeholder="Uername..." id="myInput">
+        <span onclick="addElement()" class="btn">Add</span>
+    </div>
+    
+    
+    
+    <ul class="myUl" id="myUl">
+    
+        <li>Praveen Sundar</li>
+        <li>Sundar</li>
+        <li>Parsion</li>
+        <li>Deo</li>
+        <li>Stanly</li>
+        
+    </ul>
+    
+<script>
+    
+    
+    let list=document.getElementsByTagName("li");
+    
+    var i;
+
+    for(i = 0; i < list.length; i++){
+        
+        let span=document.createElement("SPAN");
+        
+        let text=document.createTextNode("\u00D7");
+        
+        span.className="close";
+        
+        span.append(text);
+        
+        list[i].appendChild(span);
+        
+    }
+    
+    
+    let close=document.getElementsByClassName("close");
+    
+    var i;
+    
+    for(i = 0; i < close.length; i++){
+        
+        close[i].onclick=function(){
+            
+            let div=this.parentElement;
+            
+            div.style.display="none";
+            
+        }
+    }
+    
+    
+    let mylist=document.querySelector("ul")
+
+    mylist.addEventListener("click",function(e){
+        
+        if(e.target.tagName === "LI"){
+            
+            e.target.classList.toggle("checked")
+        }
+        
+    },false)
+    
+
+    
+    function addElement(){
+        
+        let li=document.createElement("li");
+        
+        let myInput=document.getElementById("myInput").value;
+        
+        let t=document.createTextNode(myInput);
+        
+        li.appendChild(t);
+        
+        if(myInput===""){
+            
+            alert("Please Enter Username")
+        }else{
+
+            document.getElementById("myUl").appendChild(li);
+        }
+         
+            document.getElementById("myInput").value="";
+    
+        
+        
+        let span=document.createElement("SPAN");
+        
+        let text=document.createTextNode("\u00D7");
+        
+        span.className="close";
+        
+        span.append(text);
+        
+        li.appendChild(span);
+        
+        
+        for(i=0; i<close.length; i++){
+            
+            close[i].onclick=function(){
+                
+                let div=this.parentElement;
+                
+                div.style.display="none";
+            }
+            
+        }
+        
+        
+       
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+<style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    
+    
+    .content{
+        
+        font-size:10em;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .btn{
+        
+        position: absolute;
+        right:0px;
+    }
+    
+    .dark{
+        
+        background-color: #111;
+        color: #fff;
+    }
+    
+    .btn{
+        
+        padding: 10px;
+        border:none;
+        background-color: red;
+        color: #fff;
+        border-radius:5px;
+    }
+    
+    
+</style>
+</head>
+<body>
+
+    
+    
+    <button class="btn" onclick="myFunction()" id="btn">Darks & White Mode</button>
+    
+    <div class="content">Praveen Sundar</div>
+    
+<script>
+
+    
+    function myFunction(){
+        
+        let content=document.body;
+        
+        content.classList.toggle("dark")
+    }
+    
+    
+    
+</script>
+    
+    
+    
+</body>
+</html>

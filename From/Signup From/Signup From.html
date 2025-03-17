@@ -1,0 +1,256 @@
+<html>
+<head>
+<style>
+    
+    *{
+        
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .btn1{
+        
+        padding: 20px;
+        font-size:1.5em;
+        background-color: green;
+        border: none;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .btn1:hover{
+        
+        opacity: 0.8;
+    }
+    
+    .model{
+        
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        background-color:rgba(0,0,0,0.4);
+    }
+    
+    .content{
+        
+        position: relative;
+        width: 500px;
+        height: 100vh;
+        background-color: #fff;
+        margin-left: 400px;
+        padding: 40px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    
+    .btn4{
+        
+        position: absolute;
+        font-size:4em;
+        right:30px;
+        top: 10px;
+        border: none;
+        outline: none;
+        color: #111;
+        cursor: pointer;
+        font-weight:bold;  
+    }
+    
+    h1{
+        
+        font-size:3em;
+        padding: 2px;
+    }
+    
+    .p2{
+        font-size: 1em;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+    
+    .p1{
+        
+        font-size: 1em;
+        padding-top: 30px;
+        padding-bottom:10px;
+    }
+    
+    hr{
+        
+        padding-bottom: 0px;
+        border: 1px solid red;
+    }
+    
+
+    
+    input[type=email],input[type=password]{
+        
+        width: 100%;
+        padding:10px;
+        margin: 5px 0px 30px;
+        background-color:skyblue;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        border: 2px solid #ddd;
+    }
+    
+    input[type=email]:hover,input[type=password]:hover{
+        
+        border: 2px solid #111;
+    }
+    
+    .lable{
+        font-size:1.5em;
+    }
+
+    .container{
+        
+        padding:10px;
+    }
+    
+    .btns::after{
+        
+        content:"";
+        clear: both;
+        display: table;
+    }
+    
+    .btn2,.btn3{
+        
+        float: left;
+        width: 50%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .btn2{
+        
+        background-color:red;
+    }
+    
+    .btn3{
+        
+        background-color: green;
+    }
+    
+    
+    .btn2:hover,.btn3:hover{
+        
+        opacity: 0.5;
+    }
+    
+    
+    
+</style>    
+</head>
+<body>
+
+    
+    <button class="btn1" onclick="document.getElementById('id01').style.display='block';">Sign Up</button>
+    
+    
+    <div class="model" id="id01">
+    
+    <span class="btn4" onclick="document.getElementById('id01').style.display='none';">&times;</span>
+        
+        <form class="content">
+        
+        <div class="container">
+            
+           <h1>Sign Up</h1>
+           <p class="p1">Please fill the from</p>
+            <hr class="hr">
+            
+            <label for="email" class="lable"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email">    
+
+            
+            <label for="pas" class="lable"><b>Password</b></label>
+            <input type="password" placeholder="Enter Passsword" name="pas">    
+
+            <label for="rem"><input type="checkbox" name="rem">Rember me</label>
+            
+            
+            <p class="p2">By creating account you agree to our <a href="#">Term &amp; Privacy</a></p>
+            
+            <div class="btns">
+            
+                <button class="btn2">Cancel</button>
+                <button class="btn3">Sign Up</button>
+                
+            </div>
+            
+            </div>
+            
+        </form>
+    </div>
+    
+    
+    
+    <script>
+    
+        let model=document.getElementById("id01");
+        
+        
+        window.onclick=function(event){
+            
+            if(event.target==model){
+                
+                model.style.display="none";
+                
+            }
+            
+        }
+        
+        
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

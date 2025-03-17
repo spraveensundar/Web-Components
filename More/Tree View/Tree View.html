@@ -1,0 +1,245 @@
+<html>
+<head>
+<style>
+    
+    *{
+        margin: 0;
+        font-family: sans-serif;
+    }
+    
+    #myUl{
+        
+        padding: 0;
+        list-style: none;
+    }
+    
+    .nested{
+        
+        list-style: none;
+    }
+    
+    .parent::before{
+        
+        
+        content: "\25B6";
+        padding:10px;
+        font-size:1.5em;
+        cursor: pointer;    
+    }
+    
+    .nested{
+        
+        display: none;
+    }
+    
+    .active{
+        
+        display: block;
+    }
+    
+    
+</style>
+</head>
+<body>
+      
+      
+    
+    
+    
+    <ul id="myUl">
+    
+        <li class="parent"><span>Beverages</span>
+        
+        
+    <ul class="nested">
+            
+        <li>Coffee</li>
+        <li>Water</li>
+        
+        <li class="parent"><span>Tea</span>
+            
+    <ul class="nested">
+    
+        <li>Black Tea</li>
+        <li>White Tea</li>
+        
+    </ul>
+        
+        
+    </li>
+
+    </ul>
+</li>    
+    </ul>
+        
+  
+<script>
+    
+
+    let parent=document.getElementsByClassName("parent");
+    
+    
+    var i;
+    
+    
+    for(i = 0; i < parent.length; i++){
+        
+        parent[i].addEventListener("click",function(){
+            
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            
+            this.classList.toggle("parent-down")
+            
+        })
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

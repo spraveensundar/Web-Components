@@ -1,0 +1,199 @@
+<html>                                                  
+<head>
+<title>Fixed Sidebar</title>
+    
+<meta charset="utf-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+    
+    
+    *{
+        margin:0;
+        box-sizing: border-box;
+    }
+    
+    #topNav{
+        
+        width:0;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 1;
+        overflow-x: hidden;
+        background-color:#111; 
+        transition: 0.5s; 
+        padding-top:90px;
+    }
+    
+    #topNav a{
+        
+        
+        padding:30px;
+        display: block;
+        font-size: 2em;
+        transition: 0.3s;
+        text-decoration: none;
+        color: #ddd;
+        outline:none;
+        text-align: center;
+    }
+    
+    
+    
+    
+    #topNav .closetap{
+        position: absolute;
+        right:0;
+        top: 0;
+        font-size: 3em;
+        font-weight: bold;
+        margin-left: 30px;
+        cursor: pointer;
+        
+    } 
+    
+    
+    #topNav a:hover{
+        
+        color:yellow;
+    }
+    
+    .opentap{
+        
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+</style>   
+</head>
+<body>
+    
+    
+    
+    
+    <div id="topNav">
+        
+        <a class="closetap" onclick="closetap()">&times;</a>
+        
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        
+    
+    </div>
+    
+    
+    <span class="opentap" onclick="opentap()">&#9776;open</span>
+    
+    <script>
+    
+        
+        
+        function opentap(){
+            
+            document.getElementById("topNav").style.width="250px";
+        }
+        
+        function closetap(){
+            
+            document.getElementById("topNav").style.width="0";
+        }
+    
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

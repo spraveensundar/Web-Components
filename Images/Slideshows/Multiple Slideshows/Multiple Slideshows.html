@@ -1,0 +1,221 @@
+<html>                                                  
+<head>
+<title>Multiple Slideshows</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    img{
+        
+        width: 100%;
+        vertical-align: middle;
+    }
+    
+    .slide-container1,.slide-container2{
+        
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+    
+    .slide1,.slide2{
+        
+           display: none;
+    }
+    
+    .prev ,.back{
+        
+        position: absolute;
+        top: 50%;
+        font-weight: bold;
+        font-size: 2em;
+        color: yellow;
+        background-color: #111;
+        padding: 20px;
+        outline:none;
+    }
+    
+    .back{
+
+        right: 0;
+    }
+    
+    .prev:hover ,.back:hover{
+        
+        color: #fff;
+    }
+    
+    
+    
+</style>
+</head>
+<body>
+
+    
+     
+    <div class="slide-container1">
+    
+        <div class="slide1">
+        
+            <img src="img1.jpeg">
+            
+        </div>
+        
+        
+        <div class="slide1">
+        
+            <img src="img2.jpeg">
+            
+        </div>
+        
+        
+        <div class="slide1">
+        
+            <img src="img3.jpeg">
+            
+        </div>
+        
+        
+        <a class="prev" onclick="next(-1,0)">&#10094;</a>
+        <a class="back" onclick="next(1,0)">&#10095;</a>
+        
+        
+    </div>
+    
+    
+    <div class="slide-container2">
+    
+        <div class="slide2">
+        
+            <img src="img_band_chicago.jpg">
+            
+        </div>
+        
+        
+        <div class="slide2">
+        
+            <img src="img_band_ny.jpg">
+            
+        </div>
+        
+        <div class="slide2">
+        
+            <img src="img_band_la.jpg">
+            
+        </div>
+        
+        
+         <a class="prev" onclick="next(-1,1)">&#10094;</a>
+        <a class="back" onclick="next(1,1)">&#10095;</a>
+        
+    </div>
+    
+<script>
+    
+    
+    let slideIdex=[1,1];
+    
+    let slidin=["slide1","slide2"];
+    
+    showSlides(1,0);
+    showSlides(1,1);
+    
+    
+    function next(n,no){
+        
+        showSlides(slideIdex[no] +=n,no);
+    }
+    
+    
+    function showSlides(n,no){
+        
+        let i;
+        let x=document.getElementsByClassName(slidin[no]);
+        
+        if (n > x.length) {slideIdex[no] = 1}
+        
+        if (n < 1) {slideIdex[no] = x.length}
+        
+        for(i=0;i<x.length;i++){
+            
+            x[i].style.display="none";
+        }
+        
+        x[slideIdex[no]-1].style.display="block"; 
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,132 @@
+<html>
+<head>  
+<style>
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    .model-box{
+        
+        display:none;
+        position: fixed;
+        background:rgba(0,0,0,0.3);
+        width: 100%;
+        left: 0;
+        padding-top:200px;
+        top: 0;
+        z-index: 1;
+        height: 100vh;
+    }
+    
+    .content{
+     
+        width:80%;
+        padding: 10px;
+        background-color: #fff;
+        margin: auto;
+        border: 2px solid #eee;
+    }
+    
+    .close{
+        
+        float: right;
+        font-size:2em;
+        color: #ddd;
+        font-weight:bold;
+        cursor:pointer;
+    }
+    
+    p{
+        
+        font-size: 2em;
+    }
+    
+    .close:hover{
+        
+        color: #111;
+    }
+    
+    .btn{
+        
+        font-size: 2em;
+        border: none;
+        background-color: red;
+        color: #fff;
+        padding: 10px 30px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+</style>
+</head>
+<body>
+    
+    
+    <button id="btn" class="btn">Open Box</button>
+
+    
+    <div class="model-box" id="model">
+    
+        
+        <div class="content">
+        
+             <span class="close">&times;</span>
+            <p>Somet Text Model Box</p>
+            
+        </div>
+        
+        
+        
+    </div>
+    
+    <script>
+    
+        
+        let btn=document.getElementById("btn");
+        
+        
+        let span = document.getElementsByClassName("close")[0];
+        
+        
+        let model=document.getElementById("model")
+        
+        
+        
+        btn.onclick=function(){
+            
+            model.style.display="block";
+        }
+        
+        span.onclick=function(){
+            
+            model.style.display="none";
+        }
+        
+        
+        model.onclick=function(event){
+            
+           
+            if(event.target==model){
+                
+                model.style.display="none";
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    
+    
+</body>
+</html>

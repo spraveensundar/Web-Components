@@ -1,0 +1,136 @@
+<html>               
+<head>
+<title>Image Modal</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .sample1{
+        
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    
+    .model{
+        
+        display: none;
+        position: fixed;
+        width: 100%;
+        margin: auto;
+        height: 100vh;
+        padding-top: 100px; 
+        top: 0;
+        left: 0;
+        background-color:rgba(0,0,0);
+        background-color:rgba(0,0,0,0.9);
+    }
+    
+    .close{
+        
+        top: 0;
+        font-size: 3em;
+        color: #fff;
+        right:0;
+        padding: 30px;
+        position: absolute;
+        font-weight: bold;
+    }
+    
+    
+    #caption{
+        
+       
+        font-size: 2em;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;padding;
+        padding: 30px;
+    }
+    
+    .sample2{
+        
+        margin: auto;
+        display: block; 
+    }
+    
+    .model,#caption{
+        
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+    
+    @keyframes zoom {
+        
+        from{transform: scale(0)}
+        to{transform: scale(1)}
+    }
+    
+    
+</style>
+</head>
+<body>
+
+    
+    
+    <img id="img1" src="img1.jpeg" class="sample1" alt="super">
+    
+      
+    <div id="model" class="model">
+    
+        
+        <span class="close" id="close">&times;</span>
+        <img class="sample2" id="img2">
+        <p id="caption"></p>
+         
+    </div>
+    
+<script>
+
+    let img1=document.getElementById("img1");
+    
+    let model=document.getElementById("model");
+    let img2=document.getElementById("img2")
+    let close=document.getElementsByClassName("close")[0];
+    let caption=document.getElementById("caption");
+    
+    img1.onclick=function(){
+        
+        model.style.display="block";
+        img2.src=this.src;
+        caption.innerHTML=this.alt;
+    
+    }
+    
+    
+    close.onclick=function(){
+        
+         model.style.display="none";
+    }
+    
+    
+    
+    
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

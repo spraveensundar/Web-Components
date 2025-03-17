@@ -1,0 +1,171 @@
+<html>                                                  
+<head>
+<title>Responsive Top Navigation</title>
+    
+<meta charset="utf-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+
+    <style>
+    
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        
+        .topnav{
+            
+            overflow: hidden;
+            background-color: #ddd;
+        }
+        
+        
+        .topnav a{
+            
+            float: left;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            font-size:2em;
+            color: #111;
+            padding:20px;
+        
+        }
+        
+        
+        
+        
+        .topnav a:hover{
+            
+            background-color:#f1f1f1;
+            color:red;
+        }
+        
+        
+        .topnav a.active{
+            
+            background-color: blue;
+            color: #111;
+        }
+        
+        
+        .search-container{
+            
+            float: right;
+        }
+        
+        .search-container input[type=text]{
+        
+            padding:10px;
+            margin-top:15px;
+            font-size:17px;
+            border: none;
+            outline: none;
+            border: 1px solid #ddd;
+
+        }
+            
+        .search-container button{
+            
+            float: right;
+            font-size:17px;
+            padding:12px;
+            outline: none;
+            border: 1px solid #ddd;
+            margin-right: 50px;
+            margin-top:15px;
+            border:1px solid #ddd;
+        }
+        
+        
+        @media screen and (max-width:600px){
+            
+            .topNav .search-container{
+                
+                float: none;
+            }
+            
+            .topNav a, .search-container input[type=text], .search-container button{
+                
+                float: none;
+                text-align:center;
+                margin: 0;
+                display: block;
+                width: 100% 
+            }
+        }
+        
+        .content{
+            
+            font-size: 2em; 
+        }
+        
+        
+        
+    
+    </style>
+
+    
+    
+</head>
+<body>
+    
+    
+    
+    
+    
+    <div class="topNav">
+    
+        
+        <a href="#home" class="active">Home</a>
+        <a href="#home">Contact</a>
+        <a href="#home">About</a>
+        
+     <div class="search-container">
+        
+    <form>
+    
+        <input type="text" placeholder="Search..">
+        
+        <button type="submit"><i class="fa fa-search"></i></button>
+        
+    </form>
+      
+         </div> 
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>    
+</html>
+

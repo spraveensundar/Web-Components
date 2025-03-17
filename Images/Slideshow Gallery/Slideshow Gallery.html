@@ -1,0 +1,341 @@
+<html>                                                  
+<head>
+<title>JavaScript-HTML</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+    
+    
+    *{
+        
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    img{
+        
+        width: 100%;
+        vertical-align: middle;
+    }
+    
+    
+    
+    .slide-container{
+        
+        position: relative;
+       
+       
+    }
+    
+    
+       .slide{
+        
+        display: none;
+    }   
+    
+    
+    .numbernext{
+        
+        position: absolute;
+        font-size: 2em;
+        color: #fff;
+    }
+    
+    
+    .prev,.back{
+        
+        position: absolute;
+        top: 50%;
+        font-size: 2em;
+        color: #fff;
+        background-color: #111;
+        padding: 30px;
+        margin-top:-10%;
+    }
+
+    
+    .back{
+        
+        right: 0;    
+    }
+    
+    
+    .content{
+        
+        
+        width: 100%;
+        background-color: #111;
+        padding:30px;
+        text-align: center;
+        color: #fff;
+    }
+    
+    
+    
+    .row{
+        
+        float: left;
+        width:16.66%;
+    }
+    
+    .demo{
+        
+        opacity: 0.5;
+    }
+    
+    .active,.demo:hover{
+        
+        opacity: 1;
+    }
+    
+ 
+
+    
+   
+    
+</style>
+</head>
+<body>
+    
+    
+    
+    
+    <div class="slide-container">
+    
+        
+        
+        <div class="slide">
+        
+            <div class="numbernext">1 / 6</div>
+            <img src="img1.jpeg">
+            
+        </div>
+        
+        <div class="slide">
+        
+            <div class="numbernext">2 / 6</div>
+            <img src="img2.jpeg">
+            
+        </div>
+        
+        <div class="slide">
+        
+            <div class="numbernext">3 / 6</div>
+            <img src="img3.jpeg">
+            
+        </div>
+        
+        
+        <div class="slide">
+        
+            <div class="numbernext">4 / 6</div>
+            <img src="img_band_chicago.jpg">
+            
+        </div>
+        
+        <div class="slide">
+        
+            <div class="numbernext">5 / 6</div>
+            <img src="img_band_la.jpg">
+            
+        </div>
+        
+        
+        <div class="slide">
+
+            <div class="numbernext">6 / 6</div>
+            <img src="img_band_ny.jpg">
+            
+        </div>
+   
+     <a class="prev" onclick="pulse(-1)">❮</a>
+     <a class="back" onclick="pulse(1)">❯</a>
+        
+        
+        <div class="content">
+        
+            <p id="caption"></p>
+            
+        </div>
+        
+        <div class="column">
+        
+            <div class="row">
+                <img src="img1.jpeg" alt="First" class="demo" onclick="current(1)">
+            </div>
+            
+            <div class="row">
+                <img src="img2.jpeg" alt="Second" class="demo" onclick="current(2)">
+            </div>
+            
+            <div class="row">
+                <img src="img3.jpeg" alt="Third"class="demo" onclick="current(3)">
+            </div>
+            
+            <div class="row">
+                <img src="img_band_chicago.jpg" alt="Four" height="111px;" class="demo" onclick="current(4)">
+            </div>  
+            
+            
+            <div class="row">
+                <img src="img_band_la.jpg" alt="Five" height="111px;" class="demo" onclick="current(5)">
+            </div>
+            
+            <div class="row">
+                <img src="img_band_ny.jpg" alt="Six" height="111px;" class="demo" onclick="current(6)">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    
+        let slideIndex=1;
+        slidShow(slideIndex);
+        
+        function pulse(n){
+            
+            slideShow(slideIndex +=n);
+        }
+        
+        function current(n){
+            
+            slideShow(slideIndex=n);
+        }
+            
+        
+        function slideShow(n){
+            
+            let i;
+            
+            let slide=document.getElementsByClassName("slide");
+            let demo=document.getElementsByClassName("demo");
+            let caption=document.getElementById("caption");
+
+            
+            if(n > slide.length){slideIndex=1};
+            
+            if(n < 1){slideIndex=slide.length};
+            
+            for(i=0;i<slide.length;i++){
+                
+                slide[i].style.display="none"
+            }
+            
+            
+            for(i=0;i<demo.length;i++){
+                
+                demo[i].className=demo[i].className.replace(" active","");
+            }
+            
+            
+            
+            slide[slideIndex-1].style.display="block";
+            
+            demo[slideIndex-1].className +=" active";
+            
+            caption.innerHTML=demo[slideIndex-1].alt;
+            
+            
+        }
+        
+        
+        
+        
+        
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

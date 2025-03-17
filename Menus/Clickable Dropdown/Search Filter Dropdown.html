@@ -1,0 +1,233 @@
+<html>                                                  
+<head>
+<title>Search/Filter Dropdown</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"crossorigin="anonymous">
+<style>
+    
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    .navbar{
+    
+        margin: 30px;
+    }
+    
+    .btn{
+        
+        font-size: 2em;
+        padding: 20px;
+        background-color: green;
+        color: #fff;
+        outline: none;
+        border: none;
+       
+    }
+    
+    .dropdown{
+        
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        background-color: #ddd;
+        width: 300px;
+        border: 1px solid #111;
+    }
+    
+    .dropdown input{
+        
+        outline: none;
+        border: none;
+        font-size: 2em;   
+        padding: 10px;  
+        border-bottom:1px solid #111;
+    }
+    
+    
+    
+    .dropdown a{
+        
+
+        text-decoration: none;
+        padding: 20px;
+        color: #111;
+        display: block;
+    }
+    
+    .dropdown a:hover{
+        
+        background-color:yellow;
+    }
+    
+    
+    .show{
+        
+        display: block;
+    }
+</style>
+</head>
+<body>
+    
+    
+    <div class="navbar" id="navbar">
+    
+        <button onclick="myFunction()" class="btn">Dropdown</button>
+    
+    <div class="dropdown" id="dropdown">
+        
+        <input type="text" onkeyup="myFilter()" id="input" placeholder="Search...">
+        
+        <a href="#html">HTML</a>
+        <a href="#css">CSS</a>
+        <a href="#javascript">JavaScript</a>
+        <a href="#bootsrap">Bootsrap</a>
+        <a href="#python">Python</a>
+        <a href="#java">Java</a>
+        <a href="#c++">C++</a>
+        
+        
+        
+    </div>    
+        
+    </div>
+    
+<script>
+    
+    
+    
+    function myFunction(){
+        
+        
+        document.getElementById("dropdown").classList.toggle("show");
+                
+    }
+    
+    
+    function myFilter(){
+        
+        var i,input,filter,a,div;
+        
+
+        input=document.getElementById("input");
+        
+        filter=input.value.toUpperCase();
+         
+        
+        div=document.getElementById("dropdown");
+        
+        a=div.getElementsByTagName("a");
+        
+        
+        for( i = 0; i < a.length; i++){
+            
+            textValue=a[i].textContent || a[i].innerText;
+            
+            
+            if(textValue.toUpperCase().indexOf(filter) > -1){
+                
+                
+                a[i].style.display=""
+            }else{
+                
+                a[i].style.display="none"
+            }
+            
+        }
+        
+        
+    }
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

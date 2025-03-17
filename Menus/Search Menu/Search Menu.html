@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Menu</title>
+    <meta charset="utfs-8">
+    <meta name="viewport" content="width=divce-width, initial-scale=0.1">
+    
+      <style>
+    
+          
+          *{
+              margin: 0px;
+              box-sizing: border-box;
+          }
+    
+        
+        .row{
+            
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        
+        }
+        
+        .left{
+            
+            flex:20%;
+            padding:20px;
+            font-size:2em;
+            background-color: #888;
+            
+        }
+        
+        .right{
+            
+            flex: 30;
+            padding: 0px;
+            padding: 200px;
+            text-align: center;
+            background-color: #ddd;
+        }
+          
+          
+          #myMenu{
+              
+              padding: 0;
+              text-align: left;
+          }  
+        
+        
+          ul li{
+              
+              list-style: none;
+            
+          }
+         
+          
+          #mySearch{
+              
+              outline: none;
+              padding:6px;
+              width:200%;
+              font-size: 20px;
+              border: none;
+          }
+        
+          .tabcontent p{
+              
+              padding: 80px;
+              
+          }
+        
+          
+          ul li a{
+              
+        
+              text-decoration: none;
+              color: #111;
+              padding: 7px;
+              display: block;
+
+          }
+          
+          
+          
+       
+          
+          
+          
+        
+          
+    </style>
+        
+    
+    
+</head>
+    
+    
+    
+    
+<body>
+    
+    
+
+    
+    <div class="row">
+    
+        <div class="left">
+            
+        <h1>Menu</h1>    
+        
+        <input type="text" placeholder="Search...." id="mySearch" onkeyup="mySearch()">
+            
+            <ul id="myMenu">
+                <li><a class="tablink" href="#html" onclick="myFunction(event,'HTML')" id="activepage">HTML</a></li>
+                <li><a class="tablink" href="#css"  onclick="myFunction(event,'CSS')">CSS</a></li>
+                <li><a class="tablink" href="#javascript" onclick="myFunction(event,'JavaScript')">JavaScript</a></li>
+                <li><a class="tablink" href="#node.js" onclick="myFunction(event,'Node.js')">Node.js</a></li>
+                <li><a class="tablink" href="#react" onclick="myFunction(event,'React')">React</a></li>
+                <li><a class="tablink" href="#php" onclick="myFunction(event,'PHP')">PHP</a></li>
+                <li><a class="tablink" href="#python" onclick="myFunction(event,'Python')">Python</a></li>
+                <li><a class="tablink" href="#jquery"onclick="myFunction(event,'jQuery')">jQuery</a></li>
+                <li><a class="tablink" href="#sql" onclick="myFunction(event,'SQL')">SQL</a></li>
+                <li><a class="tablink" href="#bootstrap" onclick="myFunction(event,'Bootstrap')">Bootstrap</a></li>
+            </ul>
+        </div>
+        
+        
+        
+        <div class="right">
+        
+    
+        <div id="HTML" class="tabcontent">
+        
+            <h1>HTML</h1>
+            
+            <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+            
+        </div>
+        
+        
+        <div id="CSS" class="tabcontent">
+        
+            <h1>CSS</h1>
+            
+            <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+            
+        </div>
+        
+        
+        <div id="JavaScript" class="tabcontent">
+        
+            <h1>JavaScript</h1>
+            
+            <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+            
+        </div>
+        
+        
+        <div id="Node.js" class="tabcontent">
+        
+            <h1>Node.js</h1>
+            
+            <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+            
+        </div>
+        
+        
+        <div id="React" class="tabcontent">
+        
+            <h1>React</h1>
+            
+            <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+            
+        </div>
+        
+        
+        <div id="PHP" class="tabcontent">
+        
+            <h1>PHP</h1>
+            
+            <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+            
+        </div>
+        
+        
+        
+        <div id="Python" class="tabcontent">
+        
+            <h1>Python</h1>
+            
+            <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+            
+        </div>
+        
+        
+        <div id="jQuery" class="tabcontent">
+        
+            <h1>jQuery</h1>
+            
+            <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+            
+        </div>
+        
+        
+        
+        <div id="SQL" class="tabcontent">
+        
+            <h1>SQL</h1>
+            
+            <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+            
+        </div>
+        
+        
+        <div id="Bootstrap" class="tabcontent">
+        
+            <h1>Bootstrap</h1>
+            
+            <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+            
+        </div>
+        
+        
+    </div>
+        
+        
+    
+    </div>
+    
+    
+    
+    
+   <script>
+   
+       function myFunction(evt,skill){
+           
+           let i,tabcontent,tablink;
+           
+           
+           tabcontent=document.getElementsByClassName("tabcontent");
+           
+           for(i = 0; i < tabcontent.length; i++){
+               
+               tabcontent[i].style.display="none";
+           }
+           
+           
+           tablink=document.getElementsByClassName("tablink");
+           
+           for(i = 0; i < tablink.length; i++){
+               
+               tablink[i].className=tablink[i].className.replace("active")
+           }
+           
+           document.getElementById(skill).style.display="block";
+           
+           evt.currentTarget.className+="active"
+       }
+       
+       
+       document.getElementById("activepage").click();
+       
+       
+       
+       function mySearch(){
+           
+           let ul,li,input,filter,a,i;
+           
+           input=document.getElementById("mySearch");
+           
+           filter=input.value.toUpperCase();
+           
+           ul=document.getElementById("myMenu");
+           
+           li=ul.getElementsByTagName("li");
+           
+           
+           for(i = 0; i < li.length; i++){
+               
+               
+               a=li[i].getElementsByTagName("a")[0];
+               
+               if(a.innerHTML.toUpperCase().indexOf(filter) > -1)
+            {
+    
+                li[i].style.display=""
+                       
+            }
+               else{
+                   
+                   li[i].style.display="none";
+               }
+            
+           }
+           
+           
+           
+       }
+      
+       
+       
+       
+       
+       
+      
+       
+    
+   </script> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>

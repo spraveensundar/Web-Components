@@ -1,0 +1,64 @@
+<html>
+<head>
+    
+    <style>
+    
+        .text{
+            
+            color:red;
+            display: none; 
+        }
+    
+    </style>
+    
+    
+</head>
+<body>
+
+    
+    
+    
+    <input  type="text" id="input">
+    <h1 class="text" id="text">WARNING! Caps lock is ON</h1>
+    
+    <script>
+    
+        
+        let input=document.getElementById("input");
+        
+        let text=document.getElementById("text");
+        
+        
+        input.addEventListener("keyup",function(event){
+            
+            
+            if(event.getModifierState("CapsLock")){
+                
+                text.style.display="block";
+            }
+            else{
+                
+                text.style.display="none";
+            }
+            
+            
+        })
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    </script>
+    
+    
+    
+    
+</body>    
+</html>
